@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+	<script src="https://kit.fontawesome.com/22d00b780c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Logo</h2>
+        <ul>
+            <li><a href="#"><i class="fa fa-pie-chart" aria-hidden="true"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i> Tactics Vault</a></li>
+            <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i> Teams</a></li>
+            <li><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Schedule Generator</a></li>
+            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Weekly Training Plans</a></li>
+            <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> Team Metrics</a></li>
+            <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Customization</a></li>
+        </ul> 
+        <!-- <div class="input_row">
+            <label class="input_label">Select your team</label><br>
+            <select id="team_select" class="input_field" type="text">
+                <option value="" disabled="disabled" selected="selected" class="team_fields">Team Name</option>
+                <option class="team_fields" value="1"> Gryffindor</option>
+                <option class="team_fields" value="2"> Hufflepuff</option>
+                <option class="team_fields" value="3"> Ravenclaw</option>
+                <option class="team_fields" value="4"> Slytherin</option>
+            </select>
+        </div> -->
+    </div>
+    <div class="main_content">
+            <div class="header">
+                <span class="highlighted_tab"> Teams </span>
+                <span class="tab_1"> U23 </span>
+                <span class="tab_2"> U19 </span> 
+            </div>  
+
+        <!-- secondary header -->
+        <div>
+            <a href="">
+                <button class="schedule">Add new Schedule</button>
+            </a>
+            
+            <div class="search_bar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search your schedule" class="search_input">
+            </div>
+        </div>  
+        
+        <div class="schedule_box">
+            <div class="schedule_box_header">
+                <div style="float: left;">
+                    <div class="schedule_title">Winter Training Schedule</div>
+                    <div class="schedule_period">4 weeks | 12 sessions</div>
+                </div>
+
+                <div style="float: right;">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    <i class="fa fa-caret-up" aria-hidden="true" data-toggle="collapse" data-target="#schedule1"></i>
+                </div>
+            </div>
+            <div id="schedule1" class="collapse schedule_details row justify-content-start">
+                <div class="col-md-2">
+                        <p class="date_heading">Start date</p>
+                        <p class="date_subtext">25 Jan, 2022</p>
+                </div>
+                <div class="col-md-4">
+                        <p class="date_heading">End date</p>
+                        <p class="date_subtext">19 Feb, 2022</p>
+                </div>
+                    <button class="update_button">Update</button>
+                    <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input"/>
+                            <span class="checkbox-tile">
+                                <span class="checkbox-label">SUNDAY</span>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input"/>
+                            <span class="checkbox-tile">
+                                <span class="checkbox-label">MONDAY</span>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input"/>
+                            <span class="checkbox-tile">
+                                <span class="checkbox-label">TUESDAY</span>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input" checked />
+                            <span class="checkbox-tile">
+                                <span class="checkbox-label">WEDNESDAY</span>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input"/>
+                            <span class="checkbox-tile">
+                                <span class="checkbox-label">THURSDAY</span>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input"/>
+                            <span class="checkbox-tile">
+                                <span class="checkbox-label">FRIDAY</span>
+                            </span>
+                        </label>
+
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input"/>
+                            <span class="checkbox-tile">
+                                <span class="checkbox-label">SATURDAY</span>
+                            </span>
+                        </label>
+                    </div>
+            </div>   
+        </div>
+
+        <!-- 2nd dialogue -->
+        <div class="schedule_box">
+            <div class="schedule_box_header">
+            <div style="float: left;">
+                <div class="schedule_title">Winter Training Schedule</div>
+                <div class="schedule_period">4 weeks | 12 sessions</div>
+            </div>
+
+            <div style="float: right;">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <i class="fa fa-caret-up" aria-hidden="true" data-toggle="collapse" data-target="#schedule1"></i>
+            </div>
+            </div>
+            <div id="schedule1" class="collapse schedule_details row justify-content-start">
+                <div class="col-md-2">
+                    <p class="date_heading">Start date</p>
+                    <p class="date_subtext">25 Jan, 2022</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="date_heading">End date</p>
+                    <p class="date_subtext">19 Feb, 2022</p>
+                </div>
+                <button class="update_button">Update</button>
+                <div class="checkbox">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SUNDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">MONDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">TUESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input" checked />
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">WEDNESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">THURSDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">FRIDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SATURDAY</span>
+                        </span>
+                    </label>
+                </div>
+            </div>   
+        </div>
+
+        <!-- 3rd dialogue box -->
+
+        <div class="schedule_box">
+            <div class="schedule_box_header">
+            <div style="float: left;">
+                <div class="schedule_title">Winter Training Schedule</div>
+                <div class="schedule_period">4 weeks | 12 sessions</div>
+            </div>
+
+            <div style="float: right;">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <i class="fa fa-caret-up" aria-hidden="true" data-toggle="collapse" data-target="#schedule1"></i>
+            </div>
+            </div>
+            <div id="schedule1" class="collapse schedule_details row justify-content-start">
+                <div class="col-md-2">
+                    <p class="date_heading">Start date</p>
+                    <p class="date_subtext">25 Jan, 2022</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="date_heading">End date</p>
+                    <p class="date_subtext">19 Feb, 2022</p>
+                </div>
+                <button class="update_button">Update</button>
+                <div class="checkbox">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SUNDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">MONDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">TUESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input" checked />
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">WEDNESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">THURSDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">FRIDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SATURDAY</span>
+                        </span>
+                    </label>
+                </div>
+            </div>   
+        </div>
+
+        <!-- 4th dialogue box -->
+        <div class="schedule_box">
+            <div class="schedule_box_header">
+            <div style="float: left;">
+                <div class="schedule_title">Winter Training Schedule</div>
+                <div class="schedule_period">4 weeks | 12 sessions</div>
+            </div>
+
+            <div style="float: right;">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <i class="fa fa-caret-up" aria-hidden="true" data-toggle="collapse" data-target="#schedule1"></i>
+            </div>
+            </div>
+            <div id="schedule1" class="collapse schedule_details row justify-content-start">
+                <div class="col-md-2">
+                    <p class="date_heading">Start date</p>
+                    <p class="date_subtext">25 Jan, 2022</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="date_heading">End date</p>
+                    <p class="date_subtext">19 Feb, 2022</p>
+                </div>
+                <button class="update_button">Update</button>
+                <div class="checkbox">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SUNDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">MONDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">TUESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input" checked />
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">WEDNESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">THURSDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">FRIDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SATURDAY</span>
+                        </span>
+                    </label>
+                </div>
+            </div>   
+        </div>
+        
+        <!-- 5th dialogue box -->
+        <div class="schedule_box">
+            <div class="schedule_box_header">
+            <div style="float: left;">
+                <div class="schedule_title">Winter Training Schedule</div>
+                <div class="schedule_period">4 weeks | 12 sessions</div>
+            </div>
+
+            <div style="float: right;">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <i class="fa fa-caret-up" aria-hidden="true" data-toggle="collapse" data-target="#schedule1"></i>
+            </div>
+            </div>
+            <div id="schedule1" class="collapse schedule_details row justify-content-start">
+                <div class="col-md-2">
+                    <p class="date_heading">Start date</p>
+                    <p class="date_subtext">25 Jan, 2022</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="date_heading">End date</p>
+                    <p class="date_subtext">19 Feb, 2022</p>
+                </div>
+                <button class="update_button">Update</button>
+                <div class="checkbox">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SUNDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">MONDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">TUESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input" checked />
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">WEDNESDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">THURSDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">FRIDAY</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox-input"/>
+                        <span class="checkbox-tile">
+                            <span class="checkbox-label">SATURDAY</span>
+                        </span>
+                    </label>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+</body>
+<script src="index.js"></script>
+</html>
