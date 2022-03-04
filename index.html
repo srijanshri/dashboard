@@ -44,10 +44,50 @@
 
         <!-- secondary header -->
         <div>
-            <a href="">
-                <button class="schedule">Add new Schedule</button>
-            </a>
+
+                <button class="schedule" data-toggle="modal" data-target="#add_new_schedule">Add new Schedule</button>
             
+                <div id="add_new_schedule" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                  
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Create New Schedule</h4>
+                            <!-- <button type="button" class="close" data-dismiss="modal" style="float: right;">&times;</button> -->
+                        </div>
+                        <div class="modal-body">
+                            <label for="name">Schedule Name</label><br>
+                            <input type="text" class="name" placeholder="Enter Name"><br><br>
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Start Date: </label><br>
+                                        <input type="date" name="startdate" class="date_box">
+                                    </div>
+                                    <div class="col">
+                                        <label>End Date: </label><br>
+                                        <input type="date" name="startdate" class="date_box">
+                                    </div>
+                                    <div class="col">
+                                        <label>No. of Weeks </label><br>
+                                        <input type="text" name="weeksCount" class="count_weeks">
+                                    </div>
+                                </div>
+                                <div class="popup_button">
+                                    <button type="button" class="close_button" data-dismiss="modal">Close</button>
+                                    <button type="button" class="create_button" data-dismiss="modal">Create</button>
+
+                                </div>
+                                
+                        </div>
+                        
+                          
+                        
+                      </div>
+                  
+                    </div>
+                  </div>
+
             <div class="search_bar">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input type="text" placeholder="Search your schedule" class="search_input">
